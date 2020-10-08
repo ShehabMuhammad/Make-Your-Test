@@ -7,7 +7,14 @@ var pop = document.querySelector("#pop").style; pop.display = "block"; pop.color
 var currentCourse ="";
  //**************************Hereo!!
 
- if( !(localStorage["questions"])) {   let thereBeLight;    }
+ if( !(localStorage["questions"])) {   
+  
+  let thereBeLight = {};
+  localStorage.setItem("questions", JSON.stringify(thereBeLight));
+ 
+ }
+
+
  var item = localStorage.getItem("questions") ;
 var questions = JSON.parse( item ) ; 
 let i; let len=Object.keys(questions).length; 
