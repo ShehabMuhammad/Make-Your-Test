@@ -51,8 +51,6 @@ for(i=0;i<len;i++)
 var ul= document.getElementById("courses-list"); ul.appendChild(mia);
 mia.onclick= function(){currentCourse = inf.innerHTML = this.innerHTML ; test();}; }
 
-var suckDick = JSON.stringify(questions["fathermother"]);
-
 function addQuestions() 
 { document.querySelector('.test').style.display = "none";
 document.querySelector('#pop').style.display = "none";
