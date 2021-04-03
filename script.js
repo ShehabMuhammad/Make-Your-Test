@@ -62,7 +62,7 @@ document.querySelector("#questions").innerHTML = " This course has a total of : 
 }
 
 function quit(){
-localStorage["questions"]=JSON.stringify(questions);
+localStorage["makeYourTest-Questions"]=JSON.stringify(questions);
 document.querySelector("#form").style.display = "none";}
 
 /* Fucking coro
