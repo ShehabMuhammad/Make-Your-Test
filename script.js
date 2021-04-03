@@ -7,13 +7,9 @@ var pop = document.querySelector("#pop").style; pop.display = "block"; pop.color
 var currentCourse ="";
  //**************************Hereo!!
 
- if( !(localStorage["questions"])) {   
-  
+ if( !(localStorage["questions"])) {  
   let thereBeLight = {};
-  localStorage.setItem("questions", JSON.stringify(thereBeLight));
- 
- }
-
+  localStorage.setItem("questions", JSON.stringify(thereBeLight));    }
 
  var item = localStorage.getItem("questions") ;
 var questions = JSON.parse( item ) ; 
@@ -41,7 +37,8 @@ var Rando = Math.floor(Math.random() * len-1);
 
 loksha = qs.filter(e=> qs.indexOf(e)!=cAns);
 let elem = loksha[Rando];
-  document.querySelector(`#a${i}`).innerHTML=  questions[currentCourse][  elem ] ;  loksha.pop() }
+  document.querySelector(`#a${i}`).innerHTML=  questions[currentCourse][  elem ] ;loksha.pop()
+ }
 }
 var inf=document.querySelector("#info");
 ///       ADD THeM ALL !! /////////***********
@@ -50,6 +47,8 @@ for(i=0;i<len;i++)
  var turtle=  crs[i]; mia.id = turtle; mia.innerHTML = turtle;  
 var ul= document.getElementById("courses-list"); ul.appendChild(mia);
 mia.onclick= function(){currentCourse = inf.innerHTML = this.innerHTML ; test();}; }
+
+//var suckDick = JSON.stringify(questions["fathermother"]);
 
 function addQuestions() 
 { document.querySelector('.test').style.display = "none";
@@ -125,10 +124,18 @@ currQ+=1;
 var sol=document.querySelector('#sol');
 sol.innerHTML=qs[currQ];
 
-var num = Math.floor(Math.random() * Math.floor(4));
-cAns = num; document.querySelector(`#a${num}`).innerHTML = questions[currentCourse][qs[currQ]]       ;
-for(var i=0;i<4;i++)
-{ if( i!=num) { document.querySelector(`#a${i}`).innerHTML=questions[currentCourse][qs.filter(e=> qs.indexOf(e)!=currQ)[i]]   ;}  }
+var num = Math.floor(Math.random() * Math.floor(4 ) );
+cAns = num; document.querySelector(`#a${num}`).innerHTML = questions[currentCourse][qs[currQ]]       ; var C_int=0; var lsF = [];
+var lsTwo = qs.filter(e=> qs.indexOf(e)!=currQ)
+while(C_int<4)
+{ 
+if(C_int == num) { C_int += 1; continue; }
+var rNd = Math.floor(Math.random() * (lsTwo.length -1)  );
+if( !lsF.includes(rNd)  ) { 
+document.querySelector(`#a${C_int}`).innerHTML=questions[currentCourse][ lsTwo[rNd] ]   ; lsF.push(rNd); C_int+=1; }
+
+
+}
     
 }
 
