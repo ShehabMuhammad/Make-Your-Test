@@ -7,11 +7,11 @@ var pop = document.querySelector("#pop").style; pop.display = "block"; pop.color
 var currentCourse ="";
  //**************************Hereo!!
 
- if( !(localStorage["questions"])) {  
+ if( !(localStorage["makeYourTest-Questions"])) {  
   let thereBeLight = {};
-  localStorage.setItem("questions", JSON.stringify(thereBeLight));    }
+  localStorage.setItem("makeYourTest-Questions", JSON.stringify(thereBeLight));    }
 
- var item = localStorage.getItem("questions") ;
+ var item = localStorage.getItem("makeYourTest-Questions") ;
 var questions = JSON.parse( item ) ; 
 let i; let len=Object.keys(questions).length; 
 
