@@ -65,17 +65,6 @@ function quit(){
 localStorage["makeYourTest-Questions"]=JSON.stringify(questions);
 document.querySelector("#form").style.display = "none";}
 
-/* Fucking coro
-function coro()
-{ var info=document.querySelector("#info"); info.innerHTML = course.id ; info.style.width = "100%"  ; 
-    document.querySelector("#main"); 
-
-document.querySelector("#courses-list").appendChild(course);
-var ret = Object.keys(questions[course.id]) ? 
-for(var fuck in  )
-{ let ref = document.createElement("LI"); ref.innerHTML = fuck; document.querySelector("#questions").appendChild(ref); 
-    }
-} */
 
 /*// *************  test *************************** */
 
