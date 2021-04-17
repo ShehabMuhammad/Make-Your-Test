@@ -1,3 +1,46 @@
+input {
+margin-left:10% !important;margin-right:10% !important;width:auto;
+}
+
+li {
+width:90%;
+height:auto;
+}
+li a {
+width: 90%;
+height:5px !important;
+}
+li button {
+width: 20px !important;float:right !important;
+height:20px !important; background-color:white;color:red;
+}
+#pop {
+width:auto !important;background-color:#f1f1f1 !important;border-radius:5px;color:#333 !important;
+border:solid 1px black;margin-top:3vw;
+
+}
+#pop button {
+margin-top:1% !important;
+margin-left:20% !important;margin-right:20% !important;width:60% !important;
+
+}
+#pop input {
+margin-top:1% !important;margin-bottom:1% !important;
+margin-left:5% !important;margin-right:5% !important;width:90% !important;
+}
+#form {
+width:auto !important;background-color:#f1f1f1 !important;border-radius:5px;color:#333 !important;
+border:solid 1px black;margin-top:2vw;
+
+}
+ #form button {
+margin-top:1% !important;
+margin-left:20% !important;margin-right:20% !important;width:60% !important;
+} 
+#form input {
+margin-top:1% !important;margin-bottom:1% !important;
+margin-left:5% !important;margin-right:5% !important;width:10rem !important;
+}
 @media(max-width:700px;)
 {.footer {margin-bottom: -10%;}}
 crsl * {width:18vw;}
@@ -14,7 +57,7 @@ li:hover {background-color:#f1f1f1;}
 .hovQ:hover { background-color: #f1f1f1 ; }
 .rmv {width:10%; transition: .2s; float: right;}
 .rmv:hover {background-color:red; color:white; }
-.active li {display:inline-block !important;}
+.active li {display:block;}
 .notActive li {display:none !important;}
 #info {width:100%;}
 .footer {
@@ -24,6 +67,27 @@ li:hover {background-color:#f1f1f1;}
     text-align:center;
     overflow:hidden
 }
-.test {margin-left:30vw; width:20vw; height: auto; background-color: #f1f1f1; overflow: auto; display: none; top: 5vw; position:absolute;}
+.front {margin-left:30vw; width:auto; height: auto; background-color: #f1f1f1;display: none; top: 5vw; position:absolute;}
 
-.test * { width:auto; height: auto; display: inherit;}
+.front * { width:auto; height: auto; display: inherit;}
+
+#test {margin-left:30vw; width:20vw; height: auto; background-color: #f1f1f1; overflow: auto; display: none; top: 5vw; position:absolute;}
+
+#test * { width:auto; height: auto; display: inherit;}
+
+#test {
+border-radius:10px; border: solid 2px white;
+margin-top:1vw;width:40% !important; height:auto;
+}
+#test div {
+padding:2%; display:block;width:100%;height:auto;
+}
+#test div span {
+width: 1%; display:inline;
+}
+#test input[type=radio] {
+display:inline; width:3%;
+}
+#test p {
+display:inline;width:50%;
+}
