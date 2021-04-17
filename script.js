@@ -139,7 +139,8 @@ function next()
 { 
 
 results = results ?? document.getElementById("res"); 
-qs =Object.keys(questions[currentCourse]);
+let currCourse= questions["currentCourse"];
+qs =Object.keys(questions[currCourse]);
 let rightAnswer = document.querySelector("#a"+cAns);
 
 let str = "The right answer is : " + (rightAnswer.innerHTML) + " ."
