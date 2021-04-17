@@ -1,0 +1,10 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "make-a-test"]
+	url = https:\\\\www.github.com\\ShehaMuhammad\\make-a-test\\
+	fetch = +refs/heads/*:refs/remotes/make-a-test/*
