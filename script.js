@@ -101,7 +101,10 @@ course.onclick = ()=>{currentCourse = info.innerHTML = nom; test();};
  var out = () => course.style.backgroundColor = "white"; course.onmouseout = out ;
 course.questions = {} ; 
     document.querySelector("#main"); 
-
+var remBut = document.createElement("BUTTON");remBut.innerHTML='X';remBut.style.width='5px';remBut.style.height='5px';remBut.style.float="right";
+remBut.onhover = ()=>{remBut.style.backgroundColor="red";remBut.style.color="white";}
+remBut.onclick = ()=>{Remove(remBut.parentNode.id);}
+course.appendChild(remBut);
 document.querySelector("#courses-list").appendChild(course);
 
 }
@@ -138,7 +141,12 @@ arrAns=arrAns.filter( e=> arrAns.indexOf(e) != rNd   );
 
 
 
+function Remove(ID){
 
+delete questions[ID];
+localStorage.setItem("questions", JSON.stringify(Qs) );
+return true;
+}
 
 
 
