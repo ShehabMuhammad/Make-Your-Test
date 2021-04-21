@@ -139,8 +139,8 @@ function next()
 { 
 
 results = results ?? document.getElementById("res"); 
-let currCourse= questions["currentCourse"];
-if(!currCourse){  document.querySelector("#test").style.display="none"; return;}
+var currCourse= questions["currentCourse"];
+if(currCourse == null || currCourse == undefined){  document.querySelector("#test").style.display="none"; return;}
 qs =Object.keys(questions[currCourse]);
 let rightAnswer = document.querySelector("#a"+cAns);
 
