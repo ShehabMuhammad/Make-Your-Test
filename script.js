@@ -139,9 +139,7 @@ function next()
 { 
 
 results = results ?? document.getElementById("res"); 
-var currCourse= questions["currentCourse"];
-if(currCourse == null || currCourse == undefined){  document.querySelector("#test").style.display="none"; return;}
-qs =Object.keys(questions[currCourse]);
+qs =Object.keys(questions[currentCourse]);
 let rightAnswer = document.querySelector("#a"+cAns);
 
 let str = "The right answer is : " + (rightAnswer.innerHTML) + " ."
@@ -213,6 +211,10 @@ document.querySelector("#pop").style.display="none";
 
 
 }
+
+
+
+
 
 
 
