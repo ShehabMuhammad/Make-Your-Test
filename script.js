@@ -58,9 +58,9 @@ let mia = document.createElement("A");
 let div= document.createElement("LI"); div.id=nameOfTest;
 let ul= document.getElementById("courses-list"); 
 mia.onclick= function(){currentCourse = inf.innerHTML = this.innerHTML ; test();}; 
-let remBut = document.createElement("BUTTON");remBut.innerHTML='x';remBut.style.width='auto';remBut.style.height= mia.height; remBut.style.float="right";
-remBut.onmouseover = ()=>{remBut.style.backgroundColor="red";remBut.style.color="white";}
-remBut.onmouseout = ()=>{remBut.style.backgroundColor="white";remBut.style.color="red";}
+let remBut = document.createElement("BUTTON");remBut.innerHTML='✘';remBut.style.width='auto';remBut.style.height= mia.height; remBut.style.float="right";
+remBut.onmouseover = ()=>{remBut.style.backgroundColor="red";remBut.style.color="lightgray";}
+remBut.onmouseout = ()=>{remBut.style.backgroundColor="lightgray";remBut.style.color="red";}
 remBut.onclick = ()=>{Remove( div.id );}
 div.width = ul.style.width;
 div.appendChild(mia);div.appendChild(remBut);
@@ -109,29 +109,33 @@ form.style.display = "none";
 /////////////////////////////////////////
 function saveCourse() 
 {
-let nom = document.getElementById("course").value;
+let ddg = document.getElementById("course");
+ 
+ let nom = ddg.value
+ if(questions[nom]){ddg.value="";return;}
 if(/^\s+$/g.test(nom) || nom === "" ) {alert("This's not a valid name. "); return; } 
 questions[nom] = {} ; 
-let pop = document.querySelector("#pop").style.display = "none";
+let pop = document.querySelector("#pop");
+ pop.style.display = "none";
 let info=document.querySelector("#info");    
 let course = document.createElement("A"); 
 let div= document.createElement("LI");
 
 course.innerHTML = nom; 
-div.setAttribute("id", nom);
+div.setAttribute("id", nom); 
 //course.style.width = "100%";
 div.onclick = ()=>{currentCourse = info.innerHTML = nom; test();};
- var hov = () =>course.style.backgroundColor ="rgb(100,100,100,0.5)"; course.onmouseover = hov ; 
- var out = () => course.style.backgroundColor = "white"; course.onmouseout = out ;
+ //var hov = () =>course.style.backgroundColor ="rgb(100,100,100,0.5)"; course.onmouseover = hov ; 
+ //var out = () => course.style.backgroundColor = "white"; course.onmouseout = out ;
 course.questions = {} ; 
-let remBut = document.createElement("BUTTON");remBut.innerHTML='x';remBut.style.color="red";remBut.style.backgroundColor="white";
-remBut.onmouseover = ()=>{remBut.style.backgroundColor="red";remBut.style.color="white";}
-remBut.onmouseout = ()=>{remBut.style.backgroundColor="white";remBut.style.color="red";}
+let remBut = document.createElement("BUTTON");remBut.innerHTML='✘';remBut.style.color="red";remBut.style.backgroundColor="lightgray";
+remBut.onmouseover = ()=>{remBut.style.backgroundColor="red";remBut.style.color="lightgray";}
+remBut.onmouseout = ()=>{remBut.style.backgroundColor="lightgray";remBut.style.color="red";}
 remBut.onclick = ()=>{Remove(nom);}
  localStorage.setItem("questions", JSON.stringify(questions))
 var List = document.querySelector("#courses-list");div.width = List.width ;
 div.appendChild(course);div.appendChild(remBut);
-List.appendChild(div);
+List.appendChild(div);ddg.value="";
 }
 ///////////////////////////////////
 
