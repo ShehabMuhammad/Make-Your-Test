@@ -1,7 +1,7 @@
 input {
 margin-left:10% !important;margin-right:10% !important;width:auto;
 }
-
+#courses-list li {cursor:pointer;}
 li {
 width:90%;
 height:auto;
