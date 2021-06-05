@@ -53,17 +53,17 @@ var inf=document.querySelector("#info");
 for(let i=0;i < len; i++)
 { 
 
-let mia = document.createElement("A");
- let nameOfTest=  crs[i];  mia.innerHTML = nameOfTest;  
+ let nameOfTest =  crs[i];  
 let div= document.createElement("LI"); div.id=nameOfTest;
+div.innerHTML = nameOfTest;  
 let ul= document.getElementById("courses-list"); 
-mia.onclick= function(){currentCourse = inf.innerHTML = this.innerHTML ; test();}; 
-let remBut = document.createElement("BUTTON");remBut.innerHTML='✘';remBut.style.width='auto';remBut.style.height= mia.height; remBut.style.float="right";
+div.onclick= function(){currentCourse = inf.innerHTML = this.innerHTML ; test();}; 
+let remBut = document.createElement("BUTTON");remBut.innerHTML='✘';remBut.style.width='auto'; /* remBut.style.height= ""; */ remBut.style.float="right";
 remBut.onmouseover = ()=>{remBut.style.backgroundColor="red";remBut.style.color="lightgray";}
 remBut.onmouseout = ()=>{remBut.style.backgroundColor="lightgray";remBut.style.color="red";}
 remBut.onclick = ()=>{Remove( div.id );}
 div.width = ul.style.width;
-div.appendChild(mia);div.appendChild(remBut);
+div.appendChild(remBut);
 ul.appendChild(div); 
 }
 
