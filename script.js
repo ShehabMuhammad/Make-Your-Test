@@ -57,7 +57,7 @@ for(let i=0;i < len; i++)
 let div= document.createElement("LI"); div.id=nameOfTest;
 div.innerHTML = nameOfTest;  
 let ul= document.getElementById("courses-list"); 
-div.onclick= function(){currentCourse = inf.innerHTML = this.innerHTML ; test();}; 
+div.onclick= function(){currentCourse = inf.innerHTML = nameOfTest; test();}; 
 let remBut = document.createElement("BUTTON");remBut.innerHTML='✘';remBut.style.width='auto'; /* remBut.style.height= ""; */ remBut.style.float="right";
 remBut.onmouseover = ()=>{remBut.style.backgroundColor="red";remBut.style.color="lightgray";}
 remBut.onmouseout = ()=>{remBut.style.backgroundColor="lightgray";remBut.style.color="red";}
