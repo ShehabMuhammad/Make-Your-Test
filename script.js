@@ -121,7 +121,7 @@ let info=document.querySelector("#info");
 let course = document.createElement("A"); 
 let div= document.createElement("LI");
 div.setAttribute("id", nom); 
-course.innerHTML = nom.slice(0, 30); 
+course.innerHTML = nom.slice(0, 20); 
 //course.style.width = "100%";
 div.onclick = ()=>{currentCourse = info.innerHTML = nom; test();};
  //var hov = () =>course.style.backgroundColor ="rgb(100,100,100,0.5)"; course.onmouseover = hov ; 
